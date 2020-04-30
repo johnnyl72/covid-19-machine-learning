@@ -12,7 +12,7 @@ import tensorflow_docs as tfdocs
 
 print(tf.__version__)
 
-raw_dataset = pd.read_csv("4.14.20_corona_data.csv", sep=",", skipinitialspace=True)
+raw_dataset = pd.read_csv("4.29.20_corona_data.csv", sep=",", skipinitialspace=True)
 raw_dataset = raw_dataset[["Total Count Confirmed", "Total Count Deaths"]]
 dataset = raw_dataset.copy()
 
@@ -92,7 +92,7 @@ a = plt.axes(aspect='equal')
 plt.scatter(test_labels, test_predictions)
 plt.xlabel('True Values [Total Count Confirmed]')
 plt.ylabel('Predictions [Total Count Confirmed]')
-lims = [0, 25000]
+lims = [0, 55000]
 plt.xlim(lims)
 plt.ylim(lims)
 _ = plt.plot(lims, lims)
